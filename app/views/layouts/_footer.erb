@@ -42,7 +42,7 @@
 	color: #7F8C8D;
 }
 .footer ul li a {
-	padding: 0 0 5px 0;
+/*	padding: 0 0 0 0;*/
 	display: block;
 }
 .footer a {
@@ -142,7 +142,7 @@
     <div class="footer" id="footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                <div class="col-lg-3  col-md-3 col-sm-6 col-xs-6">
                     <h3> Phones </h3>
                     <ul>
                        <% @phones.each do |item| %>
@@ -150,7 +150,7 @@
                        <% end %>
                     </ul>
                 </div>
-                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6 ">
+                <div class="col-lg-3  col-md-3 col-sm-6 col-xs-6 ">
                     <h3> Tablets </h3>
                     <ul>
                        <% @tablets.each do |item| %>
@@ -158,18 +158,10 @@
                        <% end %>
                     </ul>
                 </div>
-                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                <div class="col-lg-3  col-md-3 col-sm-6 col-xs-6">
                     <h3> Laptops </h3>
                     <ul>
                         <% @laptops.each do |item| %>
-                        <li> <%= link_to item.name, show_item_path(:item_url => item.item_url, :item_type => item.item_type) %> </li>
-                       <% end %>
-                    </ul>
-                </div>
-                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                    <h3> Cameras </h3>
-                    <ul>
-                       <% @cameras.each do |item| %>
                         <li> <%= link_to item.name, show_item_path(:item_url => item.item_url, :item_type => item.item_type) %> </li>
                        <% end %>
                     </ul>
@@ -178,18 +170,16 @@
                     <h3> Want latest news? </h3>
                     <ul>
                         <li>
-                            <div class="input-append newsletter-box text-center">
-                                <input type="text" class="full text-center" placeholder="Email ">
-                                <button class="btn  bg-gray" type="button"> Subscribe <i class="fa fa-long-arrow-right"> </i> </button>
+                            <div class="form-group">
+                                <input type="text" class="form-control text-center" placeholder="Email ">
+                                <a href="/" class="btn btn-success" style="color:white;">Subscribe</a>
                             </div>
                         </li>
                     </ul>
                     <ul class="social">
                         <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
-                        <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
                         <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
-                        <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li>
-                        <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-instagram">   </i> </a> </li>
                     </ul>
                 </div>
             </div>

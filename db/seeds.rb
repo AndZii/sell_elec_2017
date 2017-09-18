@@ -85,6 +85,33 @@ Item.create(
     :item_url => "phones"
 )
 
+Item.create(
+    :name     => "iPad Pro 10.5\"",
+    :price    => "$650",
+    :pic      => "ipad_pro_10_5",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "phones"
+)
+
+Item.create(
+    :name     => "iPad 2017",
+    :price    => "$650",
+    :pic      => "ipad_2017",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "phones"
+)
+
+Item.create(
+    :name     => "Samsung Tab S3",
+    :price    => "$650",
+    :pic      => "samsung_tab_s_3",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "phones"
+)
+
 item_type = "watches"
 
 Item.create(
