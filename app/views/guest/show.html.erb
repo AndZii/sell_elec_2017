@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+          <div class="panel panel-primary" style="border-color: light-grey !important;">
+            <div class="panel-heading">
+               <%= @item.name %> (<span style="font-size:13px;">upto</span> <%= @item.price %>)
+            </div>
+            <div class="panel-body">
+             <img src="/img/items/<%= @item.pic %>.jpg" alt="" class="img-responsive item-image"> 
+            </div>
+            <div class="panel-footer center item-desc"> <%= @item.desc %> </div>
+          </div>
+        </div>
+    
+      <div style=""  class="col-lg-10 col-lg-offset-1">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <% @rules.each do |rule| %>
+              <p> <%= rule.rule_text %> </p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+</div>

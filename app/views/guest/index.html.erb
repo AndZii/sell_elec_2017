@@ -1,0 +1,52 @@
+
+<div style="text-align:center;">
+    <h4>We help people in NYC area buy and sell new and gently used electronic items</h4>
+    <h5>We pay more then anybody else. We pay on the spot.</h5>
+</div>
+
+<div class="container">
+    <div class="row">
+       <div class="">
+         <div class="panel panel-primary">
+           <div class="panel-heading">
+               Categories 
+           </div>
+           <div class="panel-body">
+                <% @item_types.each do |item_type| %>
+                  <%= render :partial => "/layouts/item_type_card", :locals => {:name => item_type.name,
+                                                          :picture => "item_types/" + item_type.name + ".jpg"}%>  
+                <% end %>
+               </div>
+              </div>            
+       </div>        
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+       <div class="">
+         <div class="panel panel-primary">
+           <div class="panel-heading">
+               Wanted Items 
+           </div>
+           <div class="panel-body">
+                <% @wanted_items.each do |item| %>
+                  <%= render :partial => "/layouts/product_card", :locals => {:name => item.name, :price => item.price,
+                                                                                  :item_url => item.item_url, :item_type => item.item_type,
+                                                                                        :picture => item.pic }%>  
+                <% end %>
+               </div>
+              </div>            
+       </div>        
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+      <div class="panel panel-default">
+          <div class="panel-body">
+            <div style="">
+                <h5></h5>
+            </div>
+          </div>
+    </div>  
+    </div>
+</div>

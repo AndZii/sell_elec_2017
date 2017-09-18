@@ -1,0 +1,31 @@
+      <!-- Static navbar -->
+      <nav id="nav-bar" class="navbar navbar-default">
+        <div class="container">
+         <div class="row">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"  onclick="openNav()" \>
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">sellelectronics.nyc</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class=""><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                   <% @item_types.each do |item_type_tmp| %>
+                      <li><%= link_to item_type_tmp.name, show_item_types_path(:item_type => item_type_tmp.name) %></li>
+                   <% end %>
+                </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+          </div>
+        </div><!--/.container-fluid -->
+      </nav>
