@@ -5,24 +5,7 @@
 </div>
 
 <div class="container">
-    <div class="row">
-       <div class="">
-         <div class="panel panel-primary">
-           <div class="panel-heading">
-               Categories 
-           </div>
-           <div class="panel-body">
-                <% @item_types.each do |item_type| %>
-                  <%= render :partial => "/layouts/item_type_card", :locals => {:name => item_type.name,
-                                                          :picture => "item_types/" + item_type.name + ".jpg"}%>  
-                <% end %>
-               </div>
-              </div>            
-       </div>        
-    </div>
-</div>
-<div class="container">
-    <div class="row">
+    <div class="row_">
        <div class="">
          <div class="panel panel-primary">
            <div class="panel-heading">
@@ -33,6 +16,49 @@
                   <%= render :partial => "/layouts/product_card", :locals => {:name => item.name, :price => item.price,
                                                                                   :item_url => item.item_url, :item_type => item.item_type,
                                                                                         :picture => item.pic }%>  
+                <% end %>
+               </div>
+              </div>            
+       </div>        
+    </div>
+</div>
+
+<% @item_types.each do |item_type| %>
+<div class="container">
+    <div class="row_">
+       <div class="">
+         <div class="panel panel-primary">
+           <div class="panel-heading hidden">
+              <%= item_type.name %>
+           </div>
+           <div class="panel-body">
+             <%= render :partial => "/layouts/item_type_card", :locals => {:name => item_type.name,
+                                                          :picture => "item_types/" + item_type.name + ".png"}%> 
+                                                          
+                <% Item.where(:item_type => item_type.name.downcase).first(5).each do |item| %>
+                  <%= render :partial => "/layouts/product_card", :locals => {:name => item.name, :price => item.price,
+                                                                                  :item_url => item.item_url, :item_type => item.item_type,
+                                                                                        :picture => item.pic }%>  
+                <% end %>                                              
+           </div>
+          </div>            
+       </div>        
+    </div>
+</div>
+<% end %>
+
+
+<div class="container hidden">
+    <div class="row_">
+       <div class="">
+         <div class="panel panel-primary">
+           <div class="panel-heading">
+               Categories 
+           </div>
+           <div class="panel-body">
+                <% @item_types.each do |item_type| %>
+                  <%= render :partial => "/layouts/item_type_card", :locals => {:name => item_type.name,
+                                                          :picture => "item_types/" + item_type.name + ".jpg"}%>  
                 <% end %>
                </div>
               </div>            

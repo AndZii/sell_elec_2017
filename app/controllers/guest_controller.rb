@@ -12,6 +12,8 @@ class GuestController < ApplicationController
     
   def index
       @wanted_items = Item.where(:priority => 1).first(6)
+      
+      
   end
 
   def show_items

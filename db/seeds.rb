@@ -13,7 +13,7 @@ Item.create(
 
 Item.create(
     :name     => "iPhone 7 Plus",
-    :price    => "$650",
+    :price    => "$700",
     :pic      => "iphone_7_plus",
     :priority => 1,
     :item_type     => item_type,
@@ -22,7 +22,7 @@ Item.create(
 
 Item.create(
     :name     => "iPhone 6S",
-    :price    => "$650",
+    :price    => "$450",
     :pic      => "iphone_6s",
     :priority => 1,
     :item_type     => item_type,
@@ -31,7 +31,7 @@ Item.create(
 
 Item.create(
     :name     => "iPhone 6S Plus",
-    :price    => "$650",
+    :price    => "$530",
     :pic      => "iphone_6s",
     :priority => 1,
     :item_type     => item_type,
@@ -40,7 +40,7 @@ Item.create(
 
 Item.create(
     :name     => "iPhone 6",
-    :price    => "$650",
+    :price    => "$300",
     :pic      => "iphone_6",
     :priority => 1,
     :item_type     => item_type,
@@ -49,7 +49,7 @@ Item.create(
 
 Item.create(
     :name     => "iPhone 6 Plus",
-    :price    => "$650",
+    :price    => "$350",
     :pic      => "iphone_6",
     :priority => 1,
     :item_type     => item_type,
@@ -58,7 +58,7 @@ Item.create(
 
 Item.create(
     :name     => "iPhone SE",
-    :price    => "$650",
+    :price    => "$300",
     :pic      => "iphone_se",
     :priority => 1,
     :item_type     => item_type,
@@ -67,7 +67,7 @@ Item.create(
 
 Item.create(
     :name     => "iPhone 5S",
-    :price    => "$650",
+    :price    => "$200",
     :pic      => "iphone_5s",
     :priority => 1,
     :item_type     => item_type,
@@ -78,7 +78,7 @@ item_type = "tablets"
 
 Item.create(
     :name     => "iPad Pro 12.9\"",
-    :price    => "$650",
+    :price    => "$700",
     :pic      => "ipad_pro_12_9",
     :priority => 1,
     :item_type     => item_type,
@@ -96,7 +96,7 @@ Item.create(
 
 Item.create(
     :name     => "iPad 2017",
-    :price    => "$650",
+    :price    => "$379",
     :pic      => "ipad_2017",
     :priority => 1,
     :item_type     => item_type,
@@ -105,7 +105,7 @@ Item.create(
 
 Item.create(
     :name     => "Samsung Tab S3",
-    :price    => "$650",
+    :price    => "$379",
     :pic      => "samsung_tab_s_3",
     :priority => 1,
     :item_type     => item_type,
@@ -116,7 +116,7 @@ item_type = "watches"
 
 Item.create(
     :name     => "Apple Watch Series 3",
-    :price    => "$650",
+    :price    => "$300",
     :pic      => "apple_watch_3",
     :priority => 1,
     :item_type     => item_type,
@@ -126,8 +126,8 @@ Item.create(
 item_type = "laptops"
 
 Item.create(
-    :name     => "Apple MacBook 2017 15\"",
-    :price    => "$650",
+    :name     => "MacBook 2017 15\"",
+    :price    => "$2200",
     :pic      => "macbook_2017_15",
     :priority => 1,
     :item_type     => item_type,
@@ -138,7 +138,7 @@ item_type = "gaming"
 
 Item.create(
     :name     => "X-Box One",
-    :price    => "$650",
+    :price    => "$239",
     :pic      => "x_box_one",
     :priority => 1,
     :item_type     => item_type,
@@ -149,7 +149,7 @@ item_type = "cameras"
 
 Item.create(
     :name     => "Canon 5d Mark II",
-    :price    => "$650",
+    :price    => "$999",
     :pic      => "canon_5d_mark2",
     :priority => 1,
     :item_type     => item_type,

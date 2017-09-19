@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   get 'where-to-buy/:item_type/in-nyc' => 'guest#show_items', as: :show_item_types 
   get 'show/:item_url' => 'guest#show', as: :show_item
   
+  get '/about-electronics-buyers-of-nyc' => 'guest#about'
+    
+  get '/where-to-sell-emectronics-nyc' => 'guest#contacts'    
+    
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
