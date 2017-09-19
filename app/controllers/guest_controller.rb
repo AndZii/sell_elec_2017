@@ -23,10 +23,7 @@ class GuestController < ApplicationController
   end
     
   def show
-      @item =  Item.where(item_url: params[:item_url])
-      if @item.count > 1
-        @item = @item.first
-      end   
+      @item =  Item.where(item_url: params[:item_url]).first 
       @rules = ItemRule.where(:item_type => @item.item_type)
       @rules += ItemRule.where(:item_type => "general")
   end

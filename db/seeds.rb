@@ -8,7 +8,7 @@ Item.create(
     :pic      => "iphone_7",
     :priority => 1,
     :item_type     => item_type,
-    :item_url => "phones"
+    :item_url => "WHERE-TO-SELL-IPHONE-7-NYC-QUEENS-NEW-YORK"
 )
 
 Item.create(
@@ -17,7 +17,25 @@ Item.create(
     :pic      => "iphone_7_plus",
     :priority => 1,
     :item_type     => item_type,
-    :item_url => "phones"
+    :item_url => "IPHONE-7-BUYERS-OF-NEW-YORK"
+)
+
+Item.create(
+    :name     => "Galaxy S8 Plus",
+    :price    => "$600",
+    :pic      => "galaxy_s8_plus",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "SELL-SAMSUNG-GALAXY-NEAR-ME-NYC-STATEN-ISLAND"
+)
+
+Item.create(
+    :name     => "Galaxy S8",
+    :price    => "$700",
+    :pic      => "galaxy_s8",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "SELL-SAMSUNG-GALAXY-IN-NYC-QUEENS-BRONX-BROOKLYN"
 )
 
 Item.create(
@@ -26,7 +44,7 @@ Item.create(
     :pic      => "iphone_6s",
     :priority => 1,
     :item_type     => item_type,
-    :item_url => "phones"
+    :item_url => "HOW-TO-SELL-IPHONE-6S-NYC-NEW-YORK"
 )
 
 Item.create(
@@ -35,7 +53,7 @@ Item.create(
     :pic      => "iphone_6s",
     :priority => 1,
     :item_type     => item_type,
-    :item_url => "phones"
+    :item_url => "BEST-PLACE-TO-SELL-IPHONE-6S-NYC-QUEENS-MANHATTAN-BROOKLYN"
 )
 
 Item.create(
@@ -44,7 +62,7 @@ Item.create(
     :pic      => "iphone_6",
     :priority => 1,
     :item_type     => item_type,
-    :item_url => "phones"
+    :item_url => "IPHONE-6-BUYERS-OF-NYC-QUEENS-BROOKLYN"
 )
 
 Item.create(
@@ -53,7 +71,7 @@ Item.create(
     :pic      => "iphone_6",
     :priority => 1,
     :item_type     => item_type,
-    :item_url => "phones"
+    :item_url => "HOW-TO-SELL-IHONE-6-PLUS-IN-NEW-YORK"
 )
 
 Item.create(
@@ -62,16 +80,16 @@ Item.create(
     :pic      => "iphone_se",
     :priority => 1,
     :item_type     => item_type,
-    :item_url => "iphone"
+    :item_url => "BEST-PRICES-FOR-IPHONE-SE-IN-NEW-WORK"
 )
 
 Item.create(
     :name     => "iPhone 5S",
-    :price    => "$200",
+    :price    => "$150",
     :pic      => "iphone_5s",
     :priority => 1,
     :item_type     => item_type,
-    :item_url => "phones"
+    :item_url => "BEST-IPHONE-PRICES-IN-NEW-YORK-CITY"
 )
 
 item_type = "tablets"
@@ -82,7 +100,7 @@ Item.create(
     :pic      => "ipad_pro_12_9",
     :priority => 1,
     :item_type     => item_type,
-    :item_url => "phones"
+    :item_url => "TOP-DOLLAR-FOR-IPAD-PRO-12-NYC"
 )
 
 Item.create(
@@ -91,7 +109,7 @@ Item.create(
     :pic      => "ipad_pro_10_5",
     :priority => 1,
     :item_type     => item_type,
-    :item_url => "phones"
+    :item_url => "TOP-CASH-IPAD-PRO-10-5-NEW-YORK"
 )
 
 Item.create(
@@ -100,7 +118,7 @@ Item.create(
     :pic      => "ipad_2017",
     :priority => 1,
     :item_type     => item_type,
-    :item_url => "phones"
+    :item_url => "WHERE-TO-SELL-IPAD-2017-NYC-QUEENS-BRONX-BROOKLYN"
 )
 
 Item.create(
@@ -120,7 +138,43 @@ Item.create(
     :pic      => "apple_watch_3",
     :priority => 1,
     :item_type     => item_type,
-    :item_url => "phones"
+    :item_url => "APPLE-WATCH-BUYERS-OF-NYC"
+)
+
+Item.create(
+    :name     => "Samsung Gear S3 Frontier",
+    :price    => "$279",
+    :pic      => "samsung_gear_s3_frontier",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "SAMSUNG-GEAR-FRONTIER-BUYERS-OF-NYC"
+)
+
+Item.create(
+    :name     => "Samsung Gear S3 Classic",
+    :price    => "$249",
+    :pic      => "samsung_gear_s3_classic",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "WHERE-TO-SELL-SAMSUNG-GEAR-IN-NEW-YORK"
+)
+
+Item.create(
+    :name     => "Apple Watch Series 2",
+    :price    => "$200",
+    :pic      => "apple_watch_2",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "WHERE-TO-SELL-APPLE-WATCH-NEAR-ME"
+)
+
+Item.create(
+    :name     => "Apple Watch Series 1",
+    :price    => "$100",
+    :pic      => "apple_watch_1",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "PLACE-TO-SELL-APPLE-WATCH-NEW-WORK"
 )
 
 item_type = "laptops"
@@ -131,7 +185,7 @@ Item.create(
     :pic      => "macbook_2017_15",
     :priority => 1,
     :item_type     => item_type,
-    :item_url => "phones"
+    :item_url => "WHERE-TO-SELL-MAC-BOOK-PRO-2017-15-NYCNEW-YORK"
 )
 
 item_type = "gaming"
@@ -142,7 +196,7 @@ Item.create(
     :pic      => "x_box_one",
     :priority => 1,
     :item_type     => item_type,
-    :item_url => "phones"
+    :item_url => "WHERE-TO-SELL-X-BOX-ONE-IN-NYC-QUEENS-BROKX-BROOKLYN"
 )
 
 item_type = "cameras"
@@ -153,7 +207,7 @@ Item.create(
     :pic      => "canon_5d_mark2",
     :priority => 1,
     :item_type     => item_type,
-    :item_url => "phones"
+    :item_url => "WHERE-TO-SELL-CANON-CAMERA-IN-NEW-YORK"
 )
 
 puts "all items have been generated;"
