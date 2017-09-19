@@ -6,7 +6,7 @@
  
 
  <%= link_to show_item_types_path(:item_type => name) do %>
-  <div class="col-sm-4 col-md-2 col-xs-6 col-lg-2">
+  <div class="col-sm-4 col-md-2 col-xs-4 col-lg-2">
     <div class="panel panel-default" style="border-color: light-grey !important; margin-bottom:5px !important; margin-top:5px !important; background-color:#d8d5d5;">
       <div class="panel-body">
        <% if local_assigns[:price] %>
@@ -16,7 +16,7 @@
        <% end %>
        <img src="/img/<%= picture %>" alt="" class="img-responsive item-image"> 
       </div>
-      <div class="panel-footer center item-desc"> <%= name.capitalize! %> </div>
+      <div class="panel-footer center item-desc"> <%= name.capitalize %> </div>
     </div>
   </div>
 <% end %>

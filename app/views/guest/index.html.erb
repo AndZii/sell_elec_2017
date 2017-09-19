@@ -4,6 +4,24 @@
     <h5>We pay more then anybody else. We pay on the spot.</h5>
 </div>
 
+<div class="container visible-xs">
+    <div class="row_">
+       <div class="">
+         <div class="panel panel-primary">
+           <div class="panel-heading">
+               Categories 
+           </div>
+           <div class="panel-body">
+                <% @item_types.each do |cat_item_type| %>
+                  <%= render :partial => "/layouts/item_type_card", :locals => {:name => cat_item_type.name,
+                                                          :picture => "item_types/" + cat_item_type.name + ".png"}%>  
+                <% end %>
+               </div>
+              </div>            
+       </div>        
+    </div>
+</div>
+
 <div class="container">
     <div class="row_">
        <div class="">
@@ -24,7 +42,7 @@
 </div>
 
 <% @item_types.each do |item_type| %>
-<div class="container">
+<div class="container hidden-xs">
     <div class="row_">
        <div class="">
          <div class="panel panel-primary">
@@ -46,25 +64,6 @@
     </div>
 </div>
 <% end %>
-
-
-<div class="container hidden">
-    <div class="row_">
-       <div class="">
-         <div class="panel panel-primary">
-           <div class="panel-heading">
-               Categories 
-           </div>
-           <div class="panel-body">
-                <% @item_types.each do |item_type| %>
-                  <%= render :partial => "/layouts/item_type_card", :locals => {:name => item_type.name,
-                                                          :picture => "item_types/" + item_type.name + ".jpg"}%>  
-                <% end %>
-               </div>
-              </div>            
-       </div>        
-    </div>
-</div>
 
 <div class="container">
     <div class="row">
