@@ -1,13 +1,12 @@
 
 <div style="text-align:center;">
-    <h4>We help people in NYC area buy and sell new and gently used electronic items</h4>
+    <h4>Sell and Buy new and gently used electronic items</h4>
     <h5>We pay more then anybody else. We pay on the spot.</h5>
 </div>
 
-
 <div class="container hidden-xs">
      <%= link_to show_item_types_path(:item_type => "phones") do %>
-     <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
+     <div class="col-lg-4 col-md-4 col-sm-6 hidden-xs">
         <div class="row">
           <div class="panel panel-primary" style="border:none !important;">
            <div class="panel-body">
@@ -23,7 +22,7 @@
     </div>
     <% end %>
      <%= link_to show_item_types_path(:item_type => "tablets") do %>
-      <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
+      <div class="col-lg-4 col-md-4 col-sm-6 hidden-xs">
          <div class="row">
           <div class="panel panel-primary" style="border:none !important;">
            <div class="panel-body">
@@ -38,11 +37,27 @@
         </div>
     </div>
     <% end %>
+    <%= link_to show_item_types_path(:item_type => "laptops") do %>
+      <div class="col-lg-4 col-md-4 col-sm-6 hidden-sm hidden-xs">
+         <div class="row">
+          <div class="panel panel-primary" style="border:none !important;">
+           <div class="panel-body">
+                <img src="/img/item_types/laptops.png" alt="" class="img-responsive item-image">
+           </div>
+           <div class="panel-footer item-desc" style="border:none !important; background: white;">
+              <h3>Laptops</h3> <br>
+               We buy Apple, Samsung, LG, Microsoft <br>
+                laptops in New York
+           </div>
+          </div>            
+        </div>
+    </div>
+    <% end %>
 </div>
 
 
 <div class="container visible-xs">
-    <div class="row_">
+    <div class="row">
        <div class="">
          <div class="panel panel-primary">
            <div class="panel-heading">
@@ -60,7 +75,7 @@
 </div>
 
 <div class="container">
-    <div class="row_">
+    <div class="row">
        <div class="">
          <div class="panel panel-primary">
            <div class="panel-heading">
@@ -82,7 +97,7 @@
     <% next if item_type.name == "phones" %>
     <% next if item_type.name == "tablets" %>
 <div class="container hidden-xs">
-    <div class="row_">
+    <div class="row">
        <div class="">
          <div class="panel panel-primary">
            <div class="panel-heading hidden">

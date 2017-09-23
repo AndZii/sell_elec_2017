@@ -2,6 +2,25 @@ Item.all.each { |item| item.destroy }
 puts "all items have been deleted;"
 
 item_type = "phones"
+
+Item.create(
+    :name     => "iPhone 8",
+    :price    => "$800",
+    :pic      => "iphone_8",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "WHERE-TO-SELL-IPHONE-8-NYC-QUEENS-NEW-YORK"
+)
+
+Item.create(
+    :name     => "iPhone 8 Plus",
+    :price    => "$850",
+    :pic      => "iphone_8",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "WHERE-TO-SELL-IPHONE-8-NYC-QUEENS-NEW-YORK"
+)
+
 Item.create(
     :name     => "iPhone 7",
     :price    => "$650",
@@ -180,23 +199,59 @@ Item.create(
 item_type = "laptops"
 
 Item.create(
-    :name     => "MacBook 2017 15\"",
+    :name     => "MacBook Pro 2017 15\"",
     :price    => "$2200",
     :pic      => "macbook_2017_15",
     :priority => 1,
     :item_type     => item_type,
-    :item_url => "WHERE-TO-SELL-MAC-BOOK-PRO-2017-15-NYCNEW-YORK"
+    :item_url => "WHERE-TO-SELL-MAC-BOOK-PRO-2017-15-NYC-NEW-YORK"
+)
+
+Item.create(
+    :name     => "MacBook Pro 2017 13\"",
+    :price    => "$1900",
+    :pic      => "mac_book_2017_13",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "WHERE-TO-SELL-MAC-BOOK-PRO-2017-13-NYC-NEW-YORK"
+)
+
+Item.create(
+    :name     => "MacBook Air 13\"",
+    :price    => "$1900",
+    :pic      => "macbook_air_13",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "WHERE-TO-SELL-MAC-BOOK-AIR-13-NYC-NEW-YORK"
 )
 
 item_type = "gaming"
 
 Item.create(
-    :name     => "X-Box One",
+    :name     => "XBox One",
     :price    => "$239",
     :pic      => "x_box_one",
     :priority => 1,
     :item_type     => item_type,
     :item_url => "WHERE-TO-SELL-X-BOX-ONE-IN-NYC-QUEENS-BROKX-BROOKLYN"
+)
+
+Item.create(
+    :name     => "Sony PlayStation Pro",
+    :price    => "$250",
+    :pic      => "ps_pro",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "WHERE-TO-SELL-PLAY-STATION-PRO-IN-NYC-QUEENS-BROKX-BROOKLYN"
+)
+
+Item.create(
+    :name     => "Nintendo Switch",
+    :price    => "$300",
+    :pic      => "nintendo_switch",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "WHERE-TO-SELL-NINTENDO-SWITCH-IN-NYC-QUEENS-BROKX-BROOKLYN"
 )
 
 item_type = "cameras"
@@ -228,7 +283,7 @@ ItemRule.all.each { |item| item.destroy }
 
 ItemRule.create(
     :item_type => "phones",
-    :rule_text => "Before sell your phone, please remove all personal accounts (ex: iCloud, gmail, samsung etc).
+    :rule_text => "Before sell your phone, please remove all personal accounts (ex: icloud, gmail, samsung etc).
     Backup all your data and files. We don't buy phones with bad ESN(IEMI). You can always check ESN status of your phone on carriers website.",
     :priority => 1
     )
@@ -248,12 +303,6 @@ ItemRule.create(
 ItemRule.create(
     :item_type => "general",
     :rule_text => "Estimates based on oral descriptions are not accurate.",
-    :priority => 1
-    )
-
-ItemRule.create(
-    :item_type => "general",
-    :rule_text => "We do not buy any lost or stolen property.",
     :priority => 1
     )
 

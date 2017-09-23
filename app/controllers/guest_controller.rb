@@ -8,6 +8,7 @@ class GuestController < ApplicationController
       @tablets = Item.where(:item_type => "tablets").first(4)
       @laptops = Item.where(:item_type => "laptops").first(4)
       @cameras = Item.where(:item_type => "cameras").first(4)
+      @title = "SELL ELECTRONICS - NYC | QUEENS | BROOKLYN | BRONX | STATEN ISLAND"
   end      
     
   def index
@@ -26,6 +27,7 @@ class GuestController < ApplicationController
       @item =  Item.where(item_url: params[:item_url]).first 
       @rules = ItemRule.where(:item_type => @item.item_type)
       @rules += ItemRule.where(:item_type => "general")
+      @title = @item.item_url.gsub("-"," ")
   end
 
   def about
