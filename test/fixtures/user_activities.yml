@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  visit_count: 1
+  ip_address: MyString
+  user_agent: MyText
+
+two:
+  visit_count: 1
+  ip_address: MyString
+  user_agent: MyText

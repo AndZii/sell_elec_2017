@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170917234626) do
+ActiveRecord::Schema.define(version: 20170924230206) do
 
   create_table "item_rules", force: true do |t|
     t.string   "item_type"
@@ -37,6 +37,14 @@ ActiveRecord::Schema.define(version: 20170917234626) do
     t.string   "item_url"
     t.string   "meta_keys"
     t.text     "meta_desc"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_activities", force: true do |t|
+    t.integer  "visit_count"
+    t.string   "ip_address"
+    t.text     "user_agent"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

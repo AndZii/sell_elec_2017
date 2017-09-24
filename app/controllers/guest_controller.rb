@@ -12,9 +12,16 @@ class GuestController < ApplicationController
   end      
     
   def index
+      
+      @user_activity = UserActivity.where(:ip_address => request.remote_ip)
+      if(@user_activity.nil? || @user_activity.count == 0)
+        UserActivity.create(:ip_address => request.remote_ip, :visit_count => 1, :user_agent => request.user_agent)
+      else
+        @user_activity.first.visit_count += 1
+        @user_activity.first.save  
+      end
+      
       @wanted_items = Item.where(:priority => 1).first(6)
-      
-      
   end
 
   def show_items
@@ -35,4 +42,8 @@ class GuestController < ApplicationController
 
   def contacts
   end
+    
+  def statistics
+    render :json => UserActivity.all
+  end      
 end

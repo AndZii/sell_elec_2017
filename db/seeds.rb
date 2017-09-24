@@ -22,6 +22,15 @@ Item.create(
 )
 
 Item.create(
+    :name     => "Samsung Note 8",
+    :price    => "$899",
+    :pic      => "samsung_note_8",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "SELL-SAMSUNG-NOTE-8-NYC-QUEENS-BROOKLYN-BRONX"
+)
+
+Item.create(
     :name     => "iPhone 7",
     :price    => "$650",
     :pic      => "iphone_7",
@@ -82,6 +91,24 @@ Item.create(
     :priority => 1,
     :item_type     => item_type,
     :item_url => "IPHONE-6-BUYERS-OF-NYC-QUEENS-BROOKLYN"
+)
+
+Item.create(
+    :name     => "LG V30",
+    :price    => "???",
+    :pic      => "lg_v_30",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "WHERE-TO-SELL-LG-G-6-NYC-QUEENS-NEW-YORK-BROOKLYN"
+)
+
+Item.create(
+    :name     => "LG G6",
+    :price    => "$439",
+    :pic      => "lg_g_6",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "WHERE-TO-SELL-LG-G-6-NYC-QUEENS-NEW-YORK-BROOKLYN"
 )
 
 Item.create(
