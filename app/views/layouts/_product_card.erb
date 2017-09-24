@@ -1,19 +1,6 @@
-<style>
-.panel-footer {
-    min-height: 60px !important;
-}
-    
-.row {
-  margin-left:  (@grid-gutter-width / -2);
-  margin-right: (@grid-gutter-width / -2);
-}
-    
-</style>
- 
-
+<div class="col-sm-4 col-md-3 col-xs-6 col-lg-2">
 <%= link_to show_item_path(:item_url => item_url, :item_type => item_type) do %>
-  <div class="col-sm-4 col-md-3 col-xs-6 col-lg-2">
-    <div class="panel panel-default" style="border-color: light-grey !important; margin-bottom:0px !important; margin-top:5px !important; ">
+    <div class="panel panel-default" style="border-color: light-grey !important; margin-bottom:5px !important; margin-top:5px !important; ">
       <div class="panel-body">
        <% if local_assigns[:price] %>
          <div class="item-price">
@@ -22,7 +9,7 @@
        <% end %>
        <img src="/img/items/<%= picture %>.jpg" alt="" class="img-responsive item-image"> 
       </div>
-      <div class="panel-footer center item-desc" style="color: #363636 !important;"> <%= name %> </div>
+      <div class="panel-footer center item-desc" style="color: #363636 !important; min-height: 60px !important; padding-bottom: 2px !important; padding-top: 4px !important;"> <%= name %> </div>
     </div>
-  </div>
 <% end %>
+</div>

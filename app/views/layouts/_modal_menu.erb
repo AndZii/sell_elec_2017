@@ -1,0 +1,47 @@
+<!-- Button HTML (to Trigger Modal) -->
+<style>
+
+    #menu-opener {
+        position:fixed;
+        bottom: 20px;
+        right: 20px;
+    } 
+
+    .menu-wrapper {
+        background-color: #2196F3;
+        text-decoration: none;
+        color: white !important;
+        border-radius: 100px;
+        padding: 25px;
+    }
+    
+    .menu-text {
+        text-decoration: none;
+        color: white !important;
+    }
+        
+</style>
+  <a  role="button" class="" data-toggle="modal" href="#myModal">
+   <div class="menu-wrapper visible-xs" id="menu-opener">
+      <i class="fa fa-bars fa-2x menu-text"  aria-hidden="true" ></i> 
+  </div>
+</a>
+<!-- Modal HTML -->
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Contact Information</h4>
+            </div>
+            <div class="modal-body">
+              <p class="map-images">
+<iframe align="center" frameborder="0" height="250" src="https://www.google.com/maps/embed/v1/place?q=119-16%20Jamaica%20Ave%20Queens%2C%20New%20York%2C%20NY%2C%20United%20States&amp;key=AIzaSyAG1JHhDDpKIublp2o1A107YHnRFEGQa7E" style="border:0" width="100%"></iframe>
+</p>
+            </div>
+            <div class="modal-footer item-desc">
+                <a type="button" class="btn btn-primary" href="tel:+1-718-846-1600">Call : +1 (718) 846-1600</a>
+            </div>
+        </div>
+    </div>
+</div>
