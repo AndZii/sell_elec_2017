@@ -44,6 +44,7 @@ class GuestController < ApplicationController
   end
     
   def statistics
-    render :json => UserActivity.all
+      @user_activity = UserActivity.all
+    render :json =>  {"total count" => @user_activity.count, "activity" => @user_activity}
   end      
 end
