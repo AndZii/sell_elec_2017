@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Statistics</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+</head>
+<body>
+   <br><br><br>
+   <h4 class="text-center">STATISTICS</h4>
+<ul class="list-group"> 
+  <div class="container">
+      <div class="row">
+          <div class="col-xs-10 col-xs-offset-1">
+             <% @res.each do |key, value| %>
+               <li class="list-group-item">
+                 <span class="badge"><%= value %></span>
+                 <%= key %>
+               </li>
+             <% end %>          
+          </div>
+      </div>
+  </div>
+   
+</ul> 
+</body>
+</html>

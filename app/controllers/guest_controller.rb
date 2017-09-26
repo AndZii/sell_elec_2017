@@ -44,7 +44,15 @@ class GuestController < ApplicationController
   end
     
   def statistics
-      @user_activity = UserActivity.all
-    render :json =>  {"total count" => @user_activity.count, "activity" => @user_activity}
+      
+      @res = {}
+      @res["Macbook users"] = UserActivity.where("user_agent like ?", "%Macintosh%").count 
+      @res["Android users"] = UserActivity.where("user_agent like ?", "%Android%").count
+      @res["iOS users"] = UserActivity.where("user_agent like ?", "%iOS%").count
+      @res["Windows users"] = UserActivity.where("user_agent like ?", "%Windows%").count
+      @res["Search engine bots"] = UserActivity.where("user_agent like ?", "%bot%").count
+      @res["Total"] = UserActivity.all.count
+#      render :json =>  
+      render layout: false
   end      
 end
