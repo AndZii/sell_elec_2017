@@ -51,7 +51,10 @@ class GuestController < ApplicationController
       @res["iOS users"] = UserActivity.where("user_agent like ?", "%iOS%").count
       @res["Windows users"] = UserActivity.where("user_agent like ?", "%Windows%").count
       @res["Search engine bots"] = UserActivity.where("user_agent like ?", "%bot%").count
-      @res["Total"] = UserActivity.all.count
+      all_official = 0
+      @res.each {|key, value|  all_official = all_official + value}
+      @res["Other"] = UserActivity.all.count - all_official
+      @res["Total"] = @res["Other"] + all_official
 #      render :json =>  
       render layout: false
   end      
