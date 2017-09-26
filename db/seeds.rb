@@ -252,15 +252,33 @@ Item.create(
     :item_url => "WHERE-TO-SELL-MAC-BOOK-AIR-13-NYC-NEW-YORK"
 )
 
+Item.create(
+    :name     => "MacBook Pro 2015 15\"",
+    :price    => "$1289",
+    :pic      => "macbook_2015_15",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "WHERE-TO-SELL-MACBOOK-PRO-NEAR-ME-NEW-YORK"
+)
+
+Item.create(
+    :name     => "MacBook Pro 2015 13\"",
+    :price    => "$1049",
+    :pic      => "macbook_2015_13",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "WHERE-TO-SELL-MACBOOK-PRO-NEAR-ME-NYC-QUEENS-BROOKLYN-BRONX"
+)
+
 item_type = "gaming"
 
 Item.create(
-    :name     => "XBox One",
-    :price    => "$239",
-    :pic      => "x_box_one",
+    :name     => "XBox One X",
+    :price    => "$320",
+    :pic      => "xbox_one_x",
     :priority => 1,
     :item_type     => item_type,
-    :item_url => "WHERE-TO-SELL-X-BOX-ONE-IN-NYC-QUEENS-BROKX-BROOKLYN"
+    :item_url => "WHERE-TO-SELL-X-BOX-ONE-X-IN-NYC-QUEENS-BROKX-BROOKLYN"
 )
 
 Item.create(
@@ -279,6 +297,24 @@ Item.create(
     :priority => 1,
     :item_type     => item_type,
     :item_url => "WHERE-TO-SELL-NINTENDO-SWITCH-IN-NYC-QUEENS-BROKX-BROOKLYN"
+)
+
+Item.create(
+    :name     => "Playstation VR",
+    :price    => "$319",
+    :pic      => "playstation_vr",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "WHERE-TO-SELL-PLAYSTATION-VR-NYC-QUEENS-BROKX-BROOKLYN"
+)
+
+Item.create(
+    :name     => "XBox One",
+    :price    => "$189",
+    :pic      => "x_box_one",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "WHERE-TO-SELL-XBOX-ONE-NYC-QUEENS-BROKX-BROOKLYN"
 )
 
 item_type = "cameras"
