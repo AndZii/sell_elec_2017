@@ -1,7 +1,7 @@
 class GuestController < ApplicationController
   
-  before_action :get_item_types
-  before_action :track_user_activity
+  before_action :get_item_types, except: [:statistics]
+  before_action :track_user_activity, except: [:statistics]
     
   def track_user_activity
       @user_activity = UserActivity.where(:ip_address => request.remote_ip)
@@ -46,7 +46,6 @@ class GuestController < ApplicationController
   end
     
   def statistics
-      
       @res = {}
       @res["Macbook users"] = UserActivity.where("user_agent like ?", "%Macintosh%").count 
       @res["Android users"] = UserActivity.where("user_agent like ?", "%Android%").count
