@@ -1,6 +1,17 @@
 class GuestController < ApplicationController
   
   before_action :get_item_types
+  before_action :track_user_activity
+    
+  def track_user_activity
+      @user_activity = UserActivity.where(:ip_address => request.remote_ip)
+      if(@user_activity.nil? || @user_activity.count == 0)
+        UserActivity.create(:ip_address => request.remote_ip, :visit_count => 1, :user_agent => request.user_agent)
+      else
+        @user_activity.first.visit_count += 1
+        @user_activity.first.save  
+      end
+  end      
     
   def get_item_types
       @item_types = ItemType.all
@@ -12,15 +23,6 @@ class GuestController < ApplicationController
   end      
     
   def index
-      
-      @user_activity = UserActivity.where(:ip_address => request.remote_ip)
-      if(@user_activity.nil? || @user_activity.count == 0)
-        UserActivity.create(:ip_address => request.remote_ip, :visit_count => 1, :user_agent => request.user_agent)
-      else
-        @user_activity.first.visit_count += 1
-        @user_activity.first.save  
-      end
-      
       @wanted_items = Item.where(:priority => 1).first(6)
   end
 
