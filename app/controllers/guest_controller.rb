@@ -49,7 +49,7 @@ class GuestController < ApplicationController
       @res = {}
       @res["Macbook users"] = UserActivity.where("user_agent like ?", "%Macintosh%").count 
       @res["Android users"] = UserActivity.where("user_agent like ?", "%Android%").count
-      @res["iOS users"] = UserActivity.where("user_agent like ?", "%iOS%").count
+      @res["iOS users"] = UserActivity.where("user_agent like ?", "%iPhone%").count
       @res["Windows users"] = UserActivity.where("user_agent like ?", "%Windows%").count
       @res["Search engine bots"] = UserActivity.where("user_agent like ?", "%bot%").count
       all_official = 0
