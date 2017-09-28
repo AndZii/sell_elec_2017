@@ -55,7 +55,7 @@ class GuestController < ApplicationController
       all_official = 0
       @res.each {|key, value|  all_official = all_official + value}
       @res["Other"] = UserActivity.all.count - all_official
-      @res["Real users only"] = all_official
+      @res["Real users only"] = @res["Other"] + all_official - @res["Search engine bots"]
       @res["Total"] = @res["Other"] + all_official
       @user_agents = UserActivity.uniq.pluck(:user_agent) 
 #      render :json =>  
