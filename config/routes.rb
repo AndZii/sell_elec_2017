@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   
   get '/about-electronics-buyers-of-nyc' => 'guest#about'
     
-  get '/where-to-sell-emectronics-nyc' => 'guest#contacts'    
+  get '/where-to-sell-electronics-nyc' => 'guest#contacts'    
     
   get '/statistics' => 'guest#statistics'    
     
