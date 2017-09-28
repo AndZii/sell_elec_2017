@@ -56,6 +56,7 @@ class GuestController < ApplicationController
       @res.each {|key, value|  all_official = all_official + value}
       @res["Other"] = UserActivity.all.count - all_official
       @res["Total"] = @res["Other"] + all_official
+      @user_agents = UserActivity.uniq.pluck(:user_agent) 
 #      render :json =>  
       render layout: false
   end      
