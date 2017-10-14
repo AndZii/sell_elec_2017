@@ -6,7 +6,7 @@ class GuestController < ApplicationController
   def track_user_activity
       @user_activity = UserActivity.where(:ip_address => request.remote_ip)
       if(@user_activity.nil? || @user_activity.count == 0)
-        UserActivity.create(:ip_address => request.remote_ip, :visit_count => 1, :user_agent => request.user_agent)
+        @user_activity = UserActivity.create(:ip_address => request.remote_ip, :visit_count => 1, :user_agent => request.user_agent)
       else
         @user_activity.first.visit_count += 1
         @user_activity.first.save  
@@ -57,8 +57,15 @@ class GuestController < ApplicationController
       @res["Other"] = UserActivity.all.count - all_official
       @res["Real users only"] = @res["Other"] + all_official - @res["Search engine bots"]
       @res["Total"] = @res["Other"] + all_official
+      @res["call button clicked"] = UserActivity.where("call_button_clicked > 0 ").count 
       @user_agents = UserActivity.uniq.pluck(:user_agent) 
 #      render :json =>  
       render layout: false
+  end  
+    
+  def call_btn_clicked
+    @user_activity.first.call_button_clicked += 1
+    @user_activity.first.save
   end      
+    
 end

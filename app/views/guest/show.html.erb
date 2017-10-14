@@ -1,3 +1,10 @@
+
+<div style="text-align:center;">
+    <h1 class="h1_header" > We pay up to <%= @item.price %> for <%= @item.name %> in New York City area</h1>
+    <h2 class="h2_header"> Check other <%= @item.item_type %> that we buy </h2>
+</div>  
+
+
 <div class="container">
     <div class="row">
         <div class="col-lg-10 col-lg-offset-1">
@@ -6,7 +13,7 @@
                <%= @item.name %> (<span style="font-size:13px;">upto</span> <%= @item.price %>)
             </div>
             <div class="panel-body">
-             <img src="/img/items/<%= @item.pic %>.jpg" alt="" class="img-responsive item-image"> 
+               <img src="/img/items/<%= @item.pic %>.jpg" alt="" class="img-responsive item-image"> 
             </div>
             <div class="panel-footer center item-desc"> <%= @item.desc %> </div>
           </div>

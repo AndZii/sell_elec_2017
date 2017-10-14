@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170924230206) do
+ActiveRecord::Schema.define(version: 20171006235906) do
 
   create_table "item_rules", force: true do |t|
     t.string   "item_type"

@@ -17,6 +17,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.h1_header {
+    font-size: 175%;
+}
+
+.h2_header {
+    font-size: 160%;
+}
+
 .item-image {
     margin: auto;
     max-height: 150px;

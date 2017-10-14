@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     
   get '/statistics' => 'guest#statistics'    
     
+  get '/call_btn_clicked' => 'guest#call_btn_clicked'    
+    
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
