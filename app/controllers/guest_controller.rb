@@ -57,7 +57,7 @@ class GuestController < ApplicationController
       @res["Other"] = UserActivity.all.count - all_official
       @res["Real users only"] = @res["Other"] + all_official - @res["Search engine bots"]
       @res["Total"] = @res["Other"] + all_official
-      @res["call button clicked"] = UserActivity.where("call_button_clicked > 0 ").count 
+#      @res["call button clicked"] = UserActivity.where("call_button_clicked > 0 ").count 
       @user_agents = UserActivity.uniq.pluck(:user_agent) 
 #      render :json =>  
       render layout: false
