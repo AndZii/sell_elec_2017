@@ -4,6 +4,15 @@ puts "all items have been deleted;"
 item_type = "phones"
 
 Item.create(
+    :name     => "iPhone X",
+    :price    => "$1099",
+    :pic      => "apple_iphone_x",
+    :priority => 1,
+    :item_type     => item_type,
+    :item_url => "WHERE-TO-SELL-IPHONE-X-NYC-QUEENS-NEW-YORK"
+)
+
+Item.create(
     :name     => "iPhone 8",
     :price    => "$800",
     :pic      => "iphone_8",
